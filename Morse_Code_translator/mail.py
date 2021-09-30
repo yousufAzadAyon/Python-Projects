@@ -105,10 +105,10 @@ def play():
     #Play the tones (., -, " " , |)
     for value in text:
         if value == ".":
-            playsound('./mp3/dot.mp3')
+            playsound('./Morse_Code_translator/mp3/dot.mp3')
             root.after(100)
         elif value == "-":
-            playsound('./mp3/dash.mp3')
+            playsound('./Morse_Code_translator/mp3/dash.mp3')
             root.after(200)
         elif value == " ":
             root.after(300)
@@ -131,7 +131,7 @@ def show_guide():
     guide.config(bg=root_color)
 
     #Create the image, label, and pack
-    morse = ImageTk.PhotoImage(Image.open('./img/morse_chart.JPG'))
+    morse = ImageTk.PhotoImage(Image.open('./Morse_Code_translator/img/morse_chart.JPG'))
     label = tkinter.Label(guide, image=morse, bg=frame_color)
     label.pack(padx=10, pady=10, ipadx=5, ipady=5)
 
