@@ -18,7 +18,7 @@ text_color = "#f8f8ff"
 root.config(bg=root_color)
 
 
-# Define funtions
+# Define functions
 def convert():
     """Call the appropriate conversion function based off radio button values"""
     # English to morse code:
@@ -98,6 +98,7 @@ def clear():
 def play():
     """Play tones for corresponding dots and dashes"""
     # Determine where the morse code is
+    global text
     if language.get() == 1:
         text = output_text.get("1.0", END)
     elif language.get() == 2:
@@ -106,10 +107,10 @@ def play():
     # Play the tones (., -, " " , |)
     for value in text:
         if value == ".":
-            playsound('./Morse_Code_translator/mp3/dot.mp3')
+            playsound('mp3/dot.mp3')
             root.after(100)
         elif value == "-":
-            playsound('./Morse_Code_translator/mp3/dash.mp3')
+            playsound('mp3/dash.mp3')
             root.after(200)
         elif value == " ":
             root.after(300)
@@ -132,7 +133,7 @@ def show_guide():
     guide.config(bg=root_color)
 
     # Create the image, label, and pack
-    morse = ImageTk.PhotoImage(Image.open('./Morse_Code_translator/img/morse_chart.JPG'))
+    morse = ImageTk.PhotoImage(Image.open('img/morse_chart.JPG'))
     label = tkinter.Label(guide, image=morse, bg=frame_color)
     label.pack(padx=10, pady=10, ipadx=5, ipady=5)
 
