@@ -90,19 +90,19 @@ text_frame.pack(padx=5, pady=5)
 
 # Layout for menu frame
 # Create the menu:  new, open, save, close, font family, font size, font option
-new_image = ImageTk.PhotoImage(Image.open('./Simple_Notepad/img/new.png'))
+new_image = ImageTk.PhotoImage(Image.open('img/new.png'))
 new_button = tkinter.Button(menu_frame, image=new_image, command=new_note)
 new_button.grid(row=0, column=0, padx=5, pady=5)
 
-open_image = ImageTk.PhotoImage(Image.open('./Simple_Notepad/img/open.png'))
+open_image = ImageTk.PhotoImage(Image.open('img/open.png'))
 open_button = tkinter.Button(menu_frame, image=open_image, command=open_note)
 open_button.grid(row=0, column=1, padx=5, pady=5)
 
-save_image = ImageTk.PhotoImage(Image.open('./Simple_Notepad/img/save.png'))
+save_image = ImageTk.PhotoImage(Image.open('img/save.png'))
 save_button = tkinter.Button(menu_frame, image=save_image, command=save_note)
 save_button.grid(row=0, column=2, padx=5, pady=5)
 
-close_image = ImageTk.PhotoImage(Image.open('./Simple_Notepad/img/close.png'))
+close_image = ImageTk.PhotoImage(Image.open('img/close.png'))
 close_button = tkinter.Button(menu_frame, image=close_image, command=close_note)
 close_button.grid(row=0, column=3, padx=5, pady=5)
 
@@ -135,7 +135,7 @@ font_option_drop.grid(row=0, column=6, padx=5, pady=5)
 # Layout for the text frame
 my_font = (font_family.get(), font_size.get())
 
-# Create input_text as a scrolltext so you can scroll through the text field.
+# Create input_text as a scroll text so you can scroll through the text field.
 # Set default width and height to be more than the window size so that on the smallest text size, the text field size is constant.
 input_text = tkinter.scrolledtext.ScrolledText(text_frame, width=1000, height=100, bg=text_color, font=my_font)
 input_text.pack()
