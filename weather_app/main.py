@@ -7,7 +7,6 @@ from io import BytesIO
 # Define window
 root = tkinter.Tk()
 root.title("Weather Forecast")
-# root.iconbitmap('weather.ico')
 root.geometry("400x400")
 root.resizable(0, 0)
 
@@ -26,9 +25,9 @@ def search():
 
     # Get API response
     # URL and my api key....USE YOUR OWN API KEY!
-    url = "api.openweathermap.org/data/2.5/weather"
-    # USE YOUR OWN API FROM OPENWEATHERMAP.OEG ITS FREE
-    api_key = "aa879db1f..............1897d58"  # USE YOUR OWN API KEY
+    url = "https://api.openweathermap.org/data/2.5/weather"
+    # This is my API key only for GitHub. In the future I might delete it
+    api_key = "6d05ec02ce15aa1cbf33d02f9b72a121"  # USE YOUR OWN API KEY
 
     # Search by the appropriate query, either city name or zip
     if search_method.get() == 1:
