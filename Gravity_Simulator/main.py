@@ -5,7 +5,7 @@ from matplotlib import pyplot
 # Define window
 root = tkinter.Tk()
 root.title("Gravity Simulator")
-root.geometry("600x650")
+root.geometry("600x680")
 
 # Define global variables
 time = 0
@@ -178,7 +178,7 @@ balls["ball_3"] = main_canvas.create_oval(245, 405, 255, 415, fill="blue", tag="
 balls["ball_4"] = main_canvas.create_oval(345, 405, 355, 415, fill="yellow", tag="BALL")
 
 # Input frame layout
-# Row labels
+# Row labels of Displacement, Velocity, Acceleration, Time
 tkinter.Label(input_frame, text="d").grid(row=0, column=0)
 tkinter.Label(input_frame, text="vi").grid(row=1, column=0)
 tkinter.Label(input_frame, text="a").grid(row=2, column=0, ipadx=22)
